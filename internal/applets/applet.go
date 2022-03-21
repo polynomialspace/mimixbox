@@ -68,6 +68,7 @@ import (
 	"github.com/nao1215/mimixbox/internal/applets/shellutils/serial"
 	"github.com/nao1215/mimixbox/internal/applets/shellutils/sleep"
 	"github.com/nao1215/mimixbox/internal/applets/shellutils/sync"
+	"github.com/nao1215/mimixbox/internal/applets/shellutils/tee"
 	"github.com/nao1215/mimixbox/internal/applets/shellutils/true"
 	"github.com/nao1215/mimixbox/internal/applets/shellutils/uuidgen"
 	"github.com/nao1215/mimixbox/internal/applets/shellutils/wget"
@@ -155,6 +156,7 @@ func init() {
 		"sync":         {sync.Run, "Synchronize cached writes to persistent storage"},
 		"tac":          {tac.Run, "Print the file contents from the end to the beginning"},
 		"tail":         {tail.Run, "Print the last NUMBER(default=10) lines"},
+		"tee":          {tee.Run, "Read from standard input and write to standard output and files"},
 		"touch":        {touch.Run, "Update the access and modification times of each FILE to the current time"},
 		"tr":           {tr.Run, "Translate or delete characters"},
 		"true":         {true.Run, "Do nothing. Return success(0)"},
